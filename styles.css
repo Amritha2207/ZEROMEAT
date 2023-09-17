@@ -1,0 +1,87 @@
+
+/* Add a keyframes animation for the logo shake */
+
+/* Keyframes for the pop-out animation */
+@keyframes popOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Reset some default styles for the header and body */
+body, h1, h2, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+.site-header {
+    background-color: #088F8F; /* Change the background color to #088F8F */
+    color: #fff;
+    height: 250px; /* Increase the header height to 120px */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align vertically */
+    justify-content: center; /* Center align horizontally */
+    text-align: center;
+    position: relative;
+}
+
+/* Style the logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 15px; /* Increase the margin to move the logo down */
+}
+
+.logo {
+    max-width: 230px; /* Increase the size of the logo */
+    transition: transform 1s ease;  /* Add a transition for the transform property */
+
+}
+
+/* Apply the shake animation to the logo on hover */
+.logo:hover {
+    animation: popOut 2s ease; /* Apply the pop-out animation */
+}
+
+/* Style the navigation links */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center align the links horizontally */
+    margin-top: 50px; /* Adjust the spacing between the logo and links */
+}
+
+.main-nav li {
+    margin: 0 30px; /* Add some spacing between links */
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: black; /* Default link color */
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition for color and box-shadow */
+    box-shadow: inset 0 0 0 0 transparent; /* Initial box-shadow value */
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+}
+
+.main-nav a:hover {
+    box-shadow: inset 100px 0 0 0 #C70039; /* Apply box-shadow on hover */
+    color: white; /* Change text color on hover */
+}
+/* Apply a scaling effect on hover */
+.element:hover {
+    transform: scale(1.2); /* Scale the element by 20% on hover */
+}
+
+
